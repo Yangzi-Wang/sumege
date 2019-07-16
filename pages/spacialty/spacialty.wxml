@@ -1,0 +1,2 @@
+<!--pages/spacialty/spacialty.wxml-->
+<text hidden='{{footControl!=0}}'>pages/spacialty/spacialty.wxml</text>

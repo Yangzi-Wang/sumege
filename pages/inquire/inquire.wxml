@@ -1,0 +1,2 @@
+<!--pages/inquire/inquire.wxml-->
+<text hidden='{{footControl!=1}}'>pages/inquire/inquire.wxml</text>
