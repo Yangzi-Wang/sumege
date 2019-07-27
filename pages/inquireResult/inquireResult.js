@@ -1,15 +1,34 @@
 // pages/inquireResult/inquireResult.js
+
+const API = require('../../API/api');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    stuNo:3119000000,
-    name:'某某某',
-    classNo:'数媒技',
-    teaName:'某某某',
-    teaPhoneNum:13300000000,
+    stuNo: '',
+    name: '',
+    classNo: '',
+    teaName: '',
+    teaPhoneNum: '',
+  },
+
+  getStudentInfo: function () {
+    API.getStudentInfo({
+      stuNo: 3119000000    //传到后台的参数，如果没有参数，则放空
+    }).then(res => {
+
+      console.log(res)    //res是后台返回的数据
+
+      this.setData({
+        name: res.name,
+        classNo: res.classNo,
+        teaName: res.teaName,
+        teaPhoneNum: res.teaPhoneNum
+      })
+    })
   },
 
   /**
